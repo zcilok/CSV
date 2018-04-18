@@ -1,0 +1,19 @@
+syntax = "proto2";
+
+package csv;
+
+option java_outer_classname = "csvproto";
+
+
+message CSVData {
+  required string name = 1;
+  required string city = 2;
+  optional string address = 3;
+  required int32  age = 4;
+  optional string city2 = 5;
+  required string zipcode = 6;
+}
+
+message CSVDataHouse {
+  repeated CSVData csvdata = 1;
+}
